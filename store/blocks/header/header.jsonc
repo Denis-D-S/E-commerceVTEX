@@ -1,0 +1,239 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  //COMEÇO DA CONFIGURAÇÃO DO DESKTOP (PAI)
+  "header-layout.desktop": {
+    "children": [
+      "flex-layout.row#notification-bar",
+      "flex-layout.row#menu-topo",
+      "sticky-layout#topo-fixo"
+    ]
+  },
+
+  //////////////////////////////////////////////////////////////////////////
+  
+  //FILHO DIRETO 1 - BARRA DE NOTIFICAÇÃO (filho lvl 1)
+  //div que guarda o "Ganhe 15%...."
+  "flex-layout.row#notification-bar": {
+    "props": {
+      "blockClass": "notification-bar",
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#notification-bar"
+    ]
+  },
+
+  //FILHO DO FILHO (filho lvl 2)
+  "rich-text#notification-bar": {
+    "props":{
+      "blockClass": "notification-bar",
+      "text": "Ganhe 15% OFF válido para as 100 primeiras compras! Use o cupom **SUMMER100**"
+    }
+  },
+
+  //////////////////////////////////////////////////////////////////////////
+
+  //FILHO DIRETO 2 - MENU TOPO (filho lvl 1)
+  //div que guarda o "quem somos", "blocos e devoluções", etc.
+  "flex-layout.row#menu-topo":{
+    "props":{
+      "blockClass":"menu-topo"
+    },
+    "children":[
+      "flex-layout.col#menu-topo"
+    ]
+  },
+
+  //FILHO DO FILHO (filho lvl 2)
+  "flex-layout.col#menu-topo": {
+      "props": {
+        "blockClass": "menu-topo"
+      },
+      "children":[
+        "flex-layout.row#menu-topo-content" // tá colocando 1 único row
+      ]
+  },
+
+  //FILHO DO FILHO DO FILHO (filho lvl 3)
+  "flex-layout.row#menu-topo-content":{
+    "children":[
+      "flex-layout.col#menu-topo-content", //onde neste roll teremos 3 colunas - este componente fica na COLUNA 1
+ 
+      "flex-layout.col#icones-topo" //este componente fica na COLUNA 3
+    ],
+    "props": {
+      "blockClass": "menu-topo-content",
+      "colSizing": "auto"
+    }
+  },
+
+  //FILHO DO FILHO DO FILHO DO FILHO (filho lvl 4)
+  "flex-layout.col#menu-topo-content":{
+    "children":[
+      "vtex.menu@2.x:menu#menu-topo"
+    ]
+  },
+
+  //FILHO DO FILHO DO FILHO DO FILHO (filho lvl 4)
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+
+  //FILHO DO FILHO DO FILHO DO FILHO (filho lvl 4)
+  "flex-layout.col#icones-topo":{
+    "children":[
+      "login",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "icones-topo"
+    }
+  },
+
+  //FILHO DO FILHO DO FILHO DO FILHO DO FILHO (filho lvl 4)
+  "login": {
+    "props": {
+      "emailAndPasswordTitle": "Acesse a loja",
+      "accessCodeTitle": "Login por código de acesso",
+      "emailPlaceholder": "e-mail",
+      "passwordPlaceholder": "Senha",
+      "optionsTitle": "Escolha uma forma de acessar",
+      "showPasswordVerificationIntoTooltip": true,
+      "showIconProfile": true,
+      "iconLabel": "Entre ou cadastre-se"
+    }
+  },
+
+  //////////////////////////////////////////////////////////////////////////
+
+
+  //FILHO DIRETO 3 - TOPO FIXO (filho lvl 1)
+  "sticky-layout#topo-fixo": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#topo-fixo"]
+  },
+  "flex-layout.row#topo-fixo": {
+    "props": {
+      "blockClass": "main-header",
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#category-menu",
+      "flex-layout.col#spacer",
+      "search-bar"
+    ]
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["logo#desktop"]
+  },
+  "flex-layout.col#category-menu": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["vtex.menu@2.x:menu#category-menu"]
+  },
+  "logo#desktop": {
+    "props": {
+      "title": "Summer",
+      "href": "/",
+      "url": "assets/logoSummer.png",
+      "width": "234",
+      "height": "92"
+    }
+  },
+  "search-bar": {
+    "blocks": ["autocomplete-result-list.v2"],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "placeholder": "Buscar...",
+      "displayMode": "search-button"
+    }
+  },
+  "autocomplete-result-list.v2": {
+    "props":{
+      "maxSuggestedProducts":2,
+      "productLayout":"HORIZONTAL"
+    },
+    "blocks": [
+      "product-summary.shelf"
+    ]
+  },
+
+
+
+  //COMEÇO DA CONFIGURAÇÃO DO MOBILE
+  "header-layout.mobile": {
+    "children": [
+      "flex-layout.row#notification-bar",
+      "sticky-layout#topo-mobile"]
+  },
+  "sticky-layout#topo-mobile": {
+    "children": [
+      "flex-layout.row#topo-mobile-1",
+      "flex-layout.row#topo-mobile-2"]
+  },
+  //MOBILE 1
+  "flex-layout.row#topo-mobile-1": {
+    "children": [
+      "search-bar",
+      "login",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  //MOBILE 2
+  "flex-layout.row#topo-mobile-2": {
+    "children": [
+      "logo#mobile",
+      "flex-layout.col#spacer",
+      "drawer#menu-mobile"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+
+
+  "drawer#menu-mobile": {
+    "children": ["vtex.menu@2.x:menu#category-menu"]
+  },
+
+
+  "logo#mobile": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/logoSummer.png",
+      "width": "146",
+      "height": "57"
+    }
+  }
+}
+

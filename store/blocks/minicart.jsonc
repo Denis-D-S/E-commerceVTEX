@@ -1,0 +1,113 @@
+{
+  "add-to-cart-button": {
+    "props": {
+      "addToCartFeedback": "customEvent",
+      "customPixelEventId": "add-to-cart-button",
+      "text": "Comprar",
+      "unavailableText": "Indisponível"
+    }
+  },
+
+  "minicart.v2": {
+    "props": {
+      "customPixelEventId": "add-to-cart-button",
+      "maxDrawerWidth": 326,
+      "quantityDisplay": "always",
+      "MinicartIcon": "icon-cart#minicart-icon"
+    },
+    "children": ["minicart-base-content"]
+  },
+    
+  //TODAS AS ESPECIFICAÇÕES ABAIXO EU COPIEI DO DEFFAULT TEMPLATE DA DOCUMENTAÇÃO SOBRE MINICART.V2
+  //TUDO ISSO ABAIXO JÁ EXISTIA NO MEU CÓDIGO, MESMO QUE NÃO ESTIVESSE ESCRITO NO MEU PROJETO.
+  //A VTEX TEM UM MONTE DE CÓDIGO DEFAULT POR BAIXO DOS PANOS QUE SÓ DÁ OVERRIDE SE O DEV PEGAR O CÓDIGO NA DOCUMENTÇAÃO
+  // E DAÍ ELE REESCREVER ELE MESMO AS MODIFICAÇÕES NO PROJETO DELE.
+  //ENTÃO PARA EDITAR O CARRINHO, VOCÊ VAI PRECISAR MODIFICAR OS ARQUIVOS ABAIXO!
+
+  "icon-cart#minicart-icon": {
+    "props": {
+      "size": 16
+    }
+  },
+
+  "minicart-base-content": {
+    "blocks": ["minicart-empty-state"],
+    "children": ["minicart-product-list", "flex-layout.row#minicart-footer"]
+  },
+
+  "flex-layout.row#minicart-footer": {
+    "props": {
+      "blockClass": "minicart-footer"
+    },
+    "children": ["flex-layout.col#minicart-footer"]
+  },
+
+  "flex-layout.col#minicart-footer": {
+    "children": ["minicart-summary", "minicart-checkout-button"]
+  },
+
+  "minicart-product-list": {
+    "blocks": ["product-list#minicart"]
+  },
+
+  "product-list#minicart": {
+    "blocks": ["product-list-content-mobile"]
+  },
+
+  "minicart-summary": {
+    "blocks": ["checkout-summary.compact#minicart"]
+  },
+
+  "minicart-checkout-button": {
+    "props": {
+      "finishShoppingButtonLink": "/checkout/#/orderform"
+    }
+  },
+
+  "checkout-summary.compact#minicart": {
+    "children": ["summary-totalizers#minicart"],
+    "props": {
+      "totalizersToShow": ["Items", "Discounts"]
+    }
+  },
+
+  "summary-totalizers#minicart": {
+    "props": {
+      "showTotal": true,
+      "showDeliveryTotal": false
+    }
+  },
+
+  "minicart-empty-state": {
+    "children": ["flex-layout.row#empty-state"]
+  },
+
+  "flex-layout.row#empty-state": {
+    "children": ["flex-layout.col#empty-state"]
+  },
+
+  "flex-layout.col#empty-state": {
+    "children": [
+      "icon-cart#minicart-empty-state",
+      "rich-text#minicart-default-empty-state"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "rowGap": 5
+    }
+  },
+
+  "icon-cart#minicart-empty-state": {
+    "props": {
+      "size": 64,
+      "blockClass": "minicart-empty-state"
+    }
+  },
+
+  "rich-text#minicart-default-empty-state": {
+    "props": {
+      "text": "Your cart is empty."
+    }
+  }
+}

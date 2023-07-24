@@ -1,0 +1,163 @@
+.flexRow--notification-bar{
+  background: #F1A1A3;
+}
+
+.flexRow--menu-topo{
+  border-bottom: 1px solid #F1A1A3;
+}
+
+.flexCol--icones-topo{
+  flex-direction:row;
+  gap: 37px;
+}
+
+.flexColChild--icones-topo{
+  display:flex;
+  align-items:center;
+}
+
+.flexRow--shelf-comprar{
+  background: rgba(37,18,3,0.30, green, blue, alpha);
+  padding: 20px, 25px;
+}
+
+.flexRowContent--shelf-comprar :global(.vtex-button){
+  border-radius: 25px;
+  border: 1px solid #C4C4C4;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  min-height: auto;
+  color: #E92328;
+  font: 14px "Amiko", sans-serif;
+}
+
+.flexRowContent--shelf-comprar :global(.vtex-button__label){
+  padding:9px 0 !important;
+}
+
+.flexRowContent--banners-middle{
+  gap:37px;
+}
+
+.flexRow--footer-0-desktop{
+  margin-top: 57px;
+  padding: 43px 0 50px;
+  background: #F1A1A3;
+}
+
+
+
+.flexRowContent--menu-link,
+.flexRowContent--main-header {
+  padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 40em) {
+  .flexRowContent--menu-link,
+  .flexRowContent--main-header {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .flexRowContent--menu-link,
+  .flexRowContent--main-header {
+    padding: 0 0.25rem;
+  }
+}
+
+.flexRowContent--menu-link {
+  background-color: #03044e;
+  color: #fff;
+}
+
+.flexRowContent--main-header-mobile {
+  align-items: center;
+  padding: 0.625rem 0.5rem;
+  background-color: #f0f0f0;
+}
+
+.flexRowContent--menu-link :global(.vtex-menu-2-x-styledLink) {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.flexRowContent--main-header :global(.vtex-menu-2-x-styledLink) {
+  color: #4F4242;
+  font-size: 15px;
+}
+
+.flexRowContent--main-header :global(.vtex-menu-2-x-styledLink--highlight) {
+  color: #F1A1A3;
+}
+
+.flexRowContent--main-header :global(.vtex-menu-2-x-styledLinkContainer) {
+  margin: 0;
+  padding: 0 20px;
+}
+
+.flexRowContent--main-header :global(.vtex-menu-2-x-submenuWrapper) {
+  margin: 0;
+  padding: 12px 23px;
+  border: 0;
+  width: 100%;
+}
+
+.flexRowContent--main-header :global(.vtex-menu-2-x-submenuWrapper) :global(.vtex-menu-2-x-menuContainer) {
+  gap: 10px;
+}
+
+.flexRow--deals {
+  background-color: #0F3E99;
+  padding: 14px 0px;
+}
+
+.flexRow--deals .stretchChildrenWidth {
+  align-items: center;
+}
+
+.flexRow--deals .flexCol {
+  align-items: center;
+  margin-bottom: 5px;
+  padding-top: 5px;
+}
+
+.flexCol--filterCol {
+  max-width: 500px;
+  min-width: 230px;
+}
+
+.flexCol--productCountCol {
+  align-items: flex-start;
+}
+
+.flexCol--orderByCol {
+  align-items: flex-end;
+}
+
+.flexCol--orderByMobileCol {
+  width: 42%;
+}
+
+.flexCol--filterMobileCol {
+  width: 38%;
+}
+
+.flexRow--quickviewMainRow {
+  display: flex;
+  max-height: 100%;
+}
+
+.flexColChild--quickviewDetails:first-child {
+  overflow-y: auto;
+  height: 66% !important;
+  overflow-x: hidden;
+}
+
+.flexColChild--quickviewDetails:last-child {
+  height: 34% !important;
+}
+
+.flexRow--addToCartRow {
+  padding-bottom: 1rem;
+}
