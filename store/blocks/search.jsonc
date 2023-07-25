@@ -5,7 +5,7 @@
       "context": {
         "orderByField": "OrderByReleaseDateDESC",
         "hideUnavailableItems": false,
-        "maxItemsPerPage": 9,
+        "maxItemsPerPage": 3,
         "skusFilter": "ALL_AVAILABLE"
       }
     }
@@ -17,7 +17,7 @@
       "context": {
         "orderByField": "OrderByReleaseDateDESC",
         "hideUnavailableItems": false,
-        "maxItemsPerPage": 9,
+        "maxItemsPerPage": 3,
         "skusFilter": "ALL_AVAILABLE"
       }
     }
@@ -29,7 +29,7 @@
       "context": {
         "orderByField": "OrderByReleaseDateDESC",
         "hideUnavailableItems": false,
-        "maxItemsPerPage": 9,
+        "maxItemsPerPage": 3,
         "skusFilter": "ALL_AVAILABLE"
       }
     }
@@ -41,7 +41,7 @@
       "context": {
         "orderByField": "OrderByReleaseDateDESC",
         "hideUnavailableItems": false,
-        "maxItemsPerPage": 9,
+        "maxItemsPerPage": 3,
         "skusFilter": "ALL_AVAILABLE"
       }
     }
@@ -53,7 +53,7 @@
       "context": {
         "orderByField": "OrderByReleaseDateDESC",
         "hideUnavailableItems": false,
-        "maxItemsPerPage": 9,
+        "maxItemsPerPage": 3,
         "skusFilter": "ALL_AVAILABLE"
       }
     }
@@ -66,12 +66,10 @@
       "search-not-found-layout"
     ]
   },
-  //COMEÇA DESKTOP
+
   "search-result-layout.desktop": {
     "children": [
-      "flex-layout.row#banner-dpto",
       "flex-layout.row#searchbread",
-      "flex-layout.row#searchtitle",
       "flex-layout.row#result"
     ],
     "props": {
@@ -87,7 +85,8 @@
   },
   "image#banner-dpto":{
     "props": {
-      "src": "assets/banner-dpto.png"
+      "src": "assets/banner-dpto.png",
+      "alt": "Banner Departamento"
     }
   },
   "flex-layout.row#searchbread": {
@@ -113,12 +112,18 @@
       "blockClass": "filterCol"
     }
   },
+  "filter-navigator.v3":{
+    "props": {
+      "initiallyCollapsed":true
+    }
+  },
   "flex-layout.col#content": {
     "children": [
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#banner-dpto",
       "flex-layout.row#searchinfo",
-      "flex-layout.row#fetchprevious",
       "flex-layout.row#products",
-      "flex-layout.row#fetchmore"
+      "pagination"
     ],
     "props": {
       "width": "grow",
@@ -143,43 +148,21 @@
       "blockClass": "productCountCol"
     }
   },
-  "flex-layout.row#fetchprevious": {
-    "props": {
-      "marginBottom": 3
-    },
-    "children": ["search-fetch-previous"]
-  },
-  "flex-layout.row#fetchmore": {
-    "props": {
-      "marginTop": 3
-    },
-    "children": ["search-fetch-more"]
-  },
-  "search-fetch-previous": {
-    "props": {
-      "htmlElementForButton": "a"
-    }
-  },
-  "search-fetch-more": {
-    "props": {
-      "htmlElementForButton": "a"
-    }
-  },
+
   "flex-layout.row#products": {
     "children": ["search-content"]
   },
   "search-content": {
     "blocks": ["gallery", "not-found"]
   },
-  //COMEÇA MOBILE:
+
   "search-result-layout.mobile": {
     "children": [
       "flex-layout.row#searchinfomobile",
       "flex-layout.row#searchbread",
       "flex-layout.row#productCountMobile",
-      "flex-layout.row#fetchprevious",
       "flex-layout.row#contentmobile",
-      "flex-layout.row#fetchmore"
+      "pagination"
     ],
     "props": {
       "pagination": "show-more",
@@ -241,7 +224,9 @@
   },
 
   "flex-layout.row#notfound": {
-    "children": ["not-found"],
+    "children": [
+      "not-found"
+    ],
     "props": {
       "fullWidth": true
     }
