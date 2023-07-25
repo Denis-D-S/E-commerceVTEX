@@ -1,3 +1,4 @@
+//Componente que monta todo o Header
 {
   "header": {
     "blocks": ["header-layout.desktop", "header-layout.mobile"]
