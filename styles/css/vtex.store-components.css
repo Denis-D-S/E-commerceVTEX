@@ -155,3 +155,22 @@
 .image {
   image-rendering: -webkit-optimize-contrast;
 }
+
+
+
+
+
+
+.notificationBarInner--minicart-notification {
+  background-color: #F1A1A3 !important;
+  width: 328px !important;
+  height: 53px !important;
+
+  color: #3A3434;
+  font-family: Amiko;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+

@@ -34,8 +34,17 @@
   //Pai de todo conteúdo
   "minicart-base-content": {
     "blocks": ["minicart-empty-state"], //o próprio minicart da VTEX verifica se o carrinho estiver vazio. Se sim, ele exibe o "blocks"
-    "children": ["minicart-product-list", "flex-layout.row#minicart-footer"] //mas se o carrinho possuir produtos dentro dele, então ele exibe os "children" abaixo. 
+    "children": ["notification.bar#minicart-notification", "minicart-product-list", "flex-layout.row#minicart-footer"] //mas se o carrinho possuir produtos dentro dele, então ele exibe os "children" abaixo. 
   },
+
+  //Topo do minicart que estou testando colocar...
+  "notification.bar#minicart-notification": {
+    "props": {
+      "content": "Meu Carrinho",
+      "blockClass": "minicart-notification"
+    }
+  
+},
 
   //no final das contas, então, os blocks e os children funcionam como filhos do componente pai.
 
