@@ -105,4 +105,21 @@
   .container--title .paragraph {
     line-height: 1.3em;
   }
+
+
+
+
+
+
+
+  .container--close-minicart-button{
+    width: fit-content;
+    position: absolute;
+    right: -280px;
+    
+  }
+
+
+
+
 }
