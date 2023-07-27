@@ -26,6 +26,14 @@
     border-radius: 0;
 }
 
+ .minicartTitle{
+    display: none;
+}
+
+.closeIconContainer{
+    display: none;
+} 
+
 
   
 
