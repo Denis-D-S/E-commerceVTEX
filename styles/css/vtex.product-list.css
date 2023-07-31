@@ -1,0 +1,30 @@
+.productBrandName {
+    display: none;
+  }
+
+.currencyContainer{
+	display: none
+}
+
+.productName{
+    font-size: 14px;
+}
+
+.quantityDropDownContainer{
+    font-size: 13px;
+}
+
+.price{
+    color: #F1A1A3;
+    font-family: Amiko;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.productImage{
+    width: 93.392px;
+    height: 62.291px;
+    flex-shrink: 0;
+}
