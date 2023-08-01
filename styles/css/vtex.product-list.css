@@ -42,7 +42,14 @@
     flex-shrink: 0;
 }
 
-.quantityDropDownContainer{
+/* .quantityDropDownContainer{
+    width: 69px;
+    height: 29px;
+    flex-shrink: 0;
+} */
+
+
+.quantitySelectorContainer{
     width: 69px;
     height: 29px;
     flex-shrink: 0;
