@@ -1,9 +1,23 @@
 .flexRow--notification-bar{
   background: #F1A1A3;
+  width: 1366px;
+  height: 35px;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .flexRow--menu-topo{
   border-bottom: 1px solid #F1A1A3;
+  width: 1366px;
+  height: 35px;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .flexCol--icones-topo{

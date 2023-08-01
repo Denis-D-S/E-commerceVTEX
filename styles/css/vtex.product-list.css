@@ -7,7 +7,19 @@
 }
 
 .productName{
+    color: #3A3434;
+    font-family: Amiko;
     font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.deleteIcon{
+    width: 13px;
+    height: 15.364px;
+    flex-shrink: 0;
 }
 
 .quantityDropDownContainer{
@@ -24,7 +36,14 @@
 }
 
 .productImage{
+    margin-top: 37px;
     width: 93.392px;
     height: 62.291px;
+    flex-shrink: 0;
+}
+
+.quantityDropDownContainer{
+    width: 69px;
+    height: 29px;
     flex-shrink: 0;
 }
